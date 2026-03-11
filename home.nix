@@ -60,10 +60,9 @@
     enable = true;
     settings = {
       general.hide_cursor = true;
-
       animations.enabled = false;
       background = {
-        path = "/home/sam/Downloads/tsuyoshi-kozu-bB1PGcGdUY4-unsplash.jpg";
+        path = "./nebula.jpg";
         blur_passes = 1;
         blur_size = 4;
       };

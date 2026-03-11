@@ -1,103 +1,102 @@
 {
-  "layer": "top",
-  "position": "top",
-  "height": 30,
-  "spacing": 4,
-  "modules-left": [
-    "dwl/tags",
-    "clock",
-    "disk",
-    "memory",
-    "cpu",
-    "temperature"
-  ],
-  "modules-center": [],
-  "modules-right": [
-    "tray",
-    "group/audio",
-    "group/networking",
-    "battery"
-  ],
-
-  "dwl/tags": {
-    "num-tags": 9
-  },
-
-  "clock": {
-    "format": "{:%I:%M:%S %p}",
-    "interval": 1,
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  },
-
-  "disk": {
-    "interval": 30,
-    "format": " {percentage_used}%",
-    "path": "/"
-  },
-
-  "memory": {
-    "format": " {percentage}%"
-  },
-
-  "cpu": {
-    "interval": 1,
-    "format": " {usage}%"
-  },
-
-  "temperature": {
-    "format": " {temperatureC}°C",
-    "critical-threshold": 80
-  },
-
-  "tray": {
-    "icon-size": 14,
-    "spacing": 10
-  },
-
-  "group/audio": {
-    "orientation": "horizontal",
-    "modules": [
-      "pulseaudio",
-      "pulseaudio#mic"
-    ]
-  },
-
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "",
-    "format-icons": {
-      "default": ["🕨", "🕩", "🕪"]
-    },
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pavucontrol"
-  },
-
-  "pulseaudio#mic": {
-    "format": "",
-    "format-source-muted": "",
-    "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-  },
-
-  "group/networking": {
-    "orientation": "horizontal",
-    "modules": [
-      "network"
-    ]
-  },
-
-  "network": {
-    "format-wifi": " {essid}",
-    "format-ethernet": "󰈀",
-    "format-disconnected": "󱐅",
-    "tooltip-format": "{ipaddr}"
-  },
-
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-icons": ["󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"]
-  }
+        "layer": "top",
+        "position": "top",
+        "height": 30,
+        "spacing": 4,
+        "modules-left": [
+                "dwl/tags",
+                "clock",
+                "disk",
+                "memory",
+                "cpu",
+                "temperature"
+        ],
+        "modules-center": [],
+        "modules-right": [
+                "tray",
+                "group/audio",
+                "group/networking",
+        ],
+        "dwl/tags": {
+                "num-tags": 4
+        },
+        "clock": {
+                "format": "{:%I:%M:%S %p}",
+                "interval": 1,
+                "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        },
+        "disk": {
+                "interval": 30,
+                "format": " {percentage_used}%",
+                "path": "/"
+        },
+        "memory": {
+                "format": " {percentage}%"
+        },
+        "cpu": {
+                "interval": 1,
+                "format": " {usage}%"
+        },
+        "temperature": {
+                "format": " {temperatureC}°C",
+                "critical-threshold": 80
+        },
+        "tray": {
+                "icon-size": 14,
+                "spacing": 10
+        },
+        "group/audio": {
+                "orientation": "horizontal",
+                "modules": [
+                        "pulseaudio",
+                        "pulseaudio#mic"
+                ]
+        },
+        "pulseaudio": {
+                "format": "{icon} {volume}%",
+                "format-muted": "",
+                "format-icons": {
+                        "default": [
+                                "🕨",
+                                "🕩",
+                                "🕪"
+                        ]
+                },
+                "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+                "on-click-right": "pavucontrol"
+        },
+        "pulseaudio#mic": {
+                "format": "",
+                "format-source-muted": "",
+                "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+        },
+        "group/networking": {
+                "orientation": "horizontal",
+                "modules": [
+                        "network"
+                ]
+        },
+        "network": {
+                "format-wifi": " {essid}",
+                "format-ethernet": "󰈀",
+                "format-disconnected": "󱐅",
+                "tooltip-format": "{ipaddr}"
+        },
+        "battery": {
+                "states": {
+                        "warning": 30,
+                        "critical": 15
+                },
+                "format": "{capacity}% {icon}",
+                "format-icons": [
+                        "󰪞",
+                        "󰪟",
+                        "󰪠",
+                        "󰪡",
+                        "󰪢",
+                        "󰪣",
+                        "󰪤",
+                        "󰪥"
+                ]
+        }
 }
