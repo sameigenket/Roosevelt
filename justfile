@@ -5,9 +5,10 @@ rebuild:
 
 edit:
         sudo {{ EDITOR }}
-        just rebuild
         git add -A
+        just rebuild
 
 commit:
+        just rebuild
         git commit
         git push

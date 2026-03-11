@@ -9,8 +9,6 @@
   environment.systemPackages = with pkgs; [
     flameshot
     typst
-    quickemu
-    qemu
     git
     neovim
     btop
@@ -38,7 +36,7 @@
     ghostty
     tmux
     wl-clipboard
-    kicad-small
+    kicad
     wlogout
     xdg-desktop-portal-wlr
     wl-clipboard
@@ -47,8 +45,6 @@
     gammastep
     ungoogled-chromium
     koruri
-    tor-browser
-    playerctl
     lm_sensors
     pulseview
     libsigrok

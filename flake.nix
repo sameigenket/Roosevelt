@@ -53,7 +53,6 @@
         {
           programs.mango.enable = true;
         }
-        stylix.nixosModules.stylix
       ];
     };
   };

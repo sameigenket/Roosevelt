@@ -14,11 +14,6 @@
       haskell-language-server
       zls
     ];
-    themes = {
-      mode = "system";
-      dark = "Compline";
-      light = "Compline";
-    };
     userSettings = {
       telemetry = {
         metrics = false;
@@ -26,7 +21,10 @@
       hour_format = "hour24";
       vim_mode = true;
       disable_ai = true;
-      buffer_font_family = "VictorMono Nerd Font Mono";
+      buffer_font_size = 18;
+      buffer_font_family = "Lilex Nerd Font Mono";
+      ui_font_family = "IBM Plex Sans";
+      ui_font_size = 16;
     };
     extensions = [
       "nix"
@@ -40,7 +38,6 @@
       "neocmake"
       "tcl"
       "pylsp"
-      "gdscript"
       "csharp"
       "assembly"
       "haskell"
@@ -49,8 +46,11 @@
       "opencode"
       "colored-zed-icons-theme"
       "justfile"
-      "julia"
       "ocaml"
     ];
+    themes = {
+      mode = "dark";
+      dark = "Compline";
+    };
   };
 }

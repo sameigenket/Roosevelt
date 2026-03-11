@@ -9,41 +9,10 @@
   imports = [
     ./modules/ghostty.nix
     ./modules/zed.nix
+    ./modules/shell.nix
+    ./modules/waybar.nix
+    ./modules/tmux.nix
   ];
-
-  programs.bash = {
-    enable = true;
-    initExtra = "
-        fastfetch
-      ";
-    shellAliases = {
-      firmware-menu = "sudo systemctl reboot --firmware-setup";
-    };
-  };
-
-  programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
-    nix-direnv.enable = true;
-  };
-
-  programs.tmux = {
-    enable = true;
-    clock24 = true;
-    terminal = "tmux-256color";
-    keyMode = "vi";
-    plugins = with pkgs.tmuxPlugins; [
-      dotbar
-      harpoon
-      tmux-fzf
-      sysstat
-      yank
-      tilish
-      weather
-      fuzzback
-      tmux-fzf
-    ];
-  };
   programs.git = {
     enable = true;
     lfs.enable = true;
@@ -52,7 +21,6 @@
         email = "supersaru@protonmail.com";
         name = "Sam";
       };
-
       core.editor = "nvim";
     };
   };
@@ -70,12 +38,6 @@
   };
   programs.starship = {
     enable = true;
-  };
-
-  programs.waybar = {
-    enable = true;
-    systemd.enable = true;
-    style = ./waybar.css;
   };
   services.swww = {
     enable = true;
@@ -123,7 +85,16 @@
       rofi-bluetooth
     ];
   };
-
+  programs.distrobox = {
+    enable = true;
+    containers = {
+      vivado = {
+        additional_packages = "git nix python3 fastfetch devenv libtinfo5 libncurses5 nala";
+        image = "ubuntu:latest";
+        entry = true;
+      };
+    };
+  };
   programs.obsidian = {
     enable = true;
     defaultSettings = {
@@ -133,7 +104,6 @@
       };
     };
   };
-
   services.playerctld = {
     enable = true;
   };

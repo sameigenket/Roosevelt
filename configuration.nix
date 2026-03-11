@@ -62,6 +62,7 @@
       anthy
     ];
   };
+  programs.fish.enable = true;
 
   nix.gc = {
     automatic = true;
@@ -71,7 +72,6 @@
   };
 
   programs.systemtap.enable = true;
-  programs.bash.completion.enable = true;
 
   virtualisation.podman = {
     enable = true;
@@ -83,6 +83,15 @@
 
   programs.steam = {
     enable = true;
+  };
+  programs.bash = {
+    interactiveShellInit = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
   };
   boot.binfmt.emulatedSystems = [
     "aarch64-linux"
@@ -105,6 +114,7 @@
       } # KDE Connect
     ];
   };
+
   networking.firewall.allowedUDPPorts = [41641]; # Or add 41641 to your existing list
   nix.settings.experimental-features = ["nix-command" "flakes"];
   system.stateVersion = "25.11"; # Did you read the comment?
