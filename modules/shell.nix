@@ -16,7 +16,6 @@
     };
     interactiveShellInit = ''
       set fish_greeting
-      tmux
       fastfetch
     '';
     plugins = [
