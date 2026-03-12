@@ -107,4 +107,7 @@
   services.playerctld = {
     enable = true;
   };
+  services.tailscale-systray = {
+    enable = true;
+  };
 }

@@ -19,6 +19,8 @@
       modules-right = [
         "tray"
         "group/audio"
+        "cpu"
+        "memory"
         "clock"
       ];
       "ext/workspaces" = {
@@ -26,6 +28,13 @@
         ignore-hidden = false;
         on-click = "activate";
         sort-by-number = true;
+      };
+      "cpu" = {
+        interval = 1;
+        format = "{usage}%";
+      };
+      "memory" = {
+        format = "{percentage}%";
       };
       "tray" = {
         icon-size = 16;
@@ -37,7 +46,9 @@
         tooltip = false;
       };
       "clock" = {
-        format = "{:%H:%M}";
+        format = "{:%H:%M:%S}";
+        interval = 1;
+        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       };
       "group/audio" = {
         orientation = "horizontal";
