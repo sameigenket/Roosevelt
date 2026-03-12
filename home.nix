@@ -12,6 +12,7 @@
     ./modules/shell.nix
     ./modules/waybar.nix
     ./modules/tmux.nix
+    ./modules/rofi.nix
     ./modules/anki.nix
   ];
   programs.git = {
