@@ -16,7 +16,6 @@
     };
     interactiveShellInit = ''
       set fish_greeting
-      fastfetch
     '';
     plugins = [
       {
@@ -41,4 +40,5 @@
     enableFishIntegration = true;
     nix-direnv.enable = true;
   };
+  programs.zsh.enable = true;
 }

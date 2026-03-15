@@ -11,6 +11,6 @@
       rofi-obsidian
       rofi-bluetooth
     ];
-    theme = ./squared-nord.rasi;
+    theme = ./theme.rasi;
   };
 }

@@ -8,12 +8,8 @@
     package = pkgs.ollama-cuda;
     loadModels = [
       "gpt-oss:20b"
-      "devstral-small-2:24b"
-      "qwen3:14b"
-      "qwen3-vl:8b"
     ];
   };
-
   services.open-webui = {
     enable = true;
   };
