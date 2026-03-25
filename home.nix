@@ -8,6 +8,7 @@
   home.stateVersion = "25.11";
   imports = [
     ./modules/ghostty.nix
+    ./modules/alacritty.nix
     ./modules/zed.nix
     ./modules/shell.nix
     ./modules/waybar.nix
@@ -60,6 +61,7 @@
   };
   services.gammastep = {
     enable = true;
+    tray = true;
     temperature.night = 2000;
     dawnTime = "6:00-6:30";
     duskTime = "18:00-18:30";

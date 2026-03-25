@@ -19,7 +19,6 @@
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.initrd.luks.devices."luks-78a4aa4f-3aa8-46df-9f3d-a1000e165776".device = "/dev/disk/by-uuid/78a4aa4f-3aa8-46df-9f3d-a1000e165776";
   networking.hostName = "roosevelt"; # Define your hostname.
   networking.networkmanager.enable = true;
 
@@ -64,16 +63,25 @@
     ];
   };
   programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   nix.gc = {
     automatic = true;
     dates = [
-      "weekly"
+      "daily"
     ];
   };
 
-  programs.systemtap.enable = true;
-
+  #Set fish as defualt shell
+  programs.bash = {
+    interactiveShellInit = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
+  };
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;

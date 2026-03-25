@@ -18,6 +18,9 @@
     virtualHosts."roosevelt.bream-pike.ts.net".extraConfig = ''
       reverse_proxy 127.0.0.1:8080
     '';
+    virtualHosts."ollama.roosevelt.bream-pike.ts.net".extraConfig = ''
+      reverse_proxy 127.0.0.1:11434
+    '';
   };
   services.tailscale.permitCertUid = "caddy";
 
@@ -38,6 +41,10 @@
   };
 
   services.sysstat = {
+    enable = true;
+  };
+
+  services.envfs = {
     enable = true;
   };
 

@@ -30,7 +30,6 @@
     tenacity
     obs-studio
     obsidian
-    pavucontrol
     ghostty
     tmux
     wl-clipboard
@@ -51,7 +50,8 @@
     tailscale
     just
     verible
-    tmux-sessionizer
+    thunar
+    inkscape
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.victor-mono

@@ -4,13 +4,13 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "IBM Plex Mono", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
     font-size: 14px;
     color: @active;
 }
 
 window#waybar {
-    background: rgba(12, 9, 10, 0.90);
+    background: rgba(12, 9, 10, 0.95);
 }
 
 /* Ensure all module groups are transparent */

@@ -19,12 +19,12 @@
         metrics = false;
       };
       terminal = {
-        shell.program = "/nix/store/f15k3dpilmiyv6zgpib289rnjykgr1r4-bash-5.3p9/bin/bash";
+        shell.program = "/nix/store/f15k3dpilmiyv6zgpib289rnjykgr1r4-bash-5.3p9/bin/zsh";
       };
       hour_format = "hour24";
       vim_mode = true;
       disable_ai = true;
-      buffer_font_size = 17;
+      buffer_font_size = 18;
       buffer_font_family = "Lilex Nerd Font Mono";
       ui_font_family = "IBM Plex Sans";
       ui_font_size = 16;

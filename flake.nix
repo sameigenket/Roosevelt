@@ -28,10 +28,6 @@
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -42,7 +38,6 @@
     nvf,
     helium,
     zen-browser,
-    stylix,
   }: {
     nixosConfigurations.roosevelt = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
