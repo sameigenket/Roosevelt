@@ -15,4 +15,4 @@ commit:
 
 update:
         nix-channel --update
-        rebuild
+        just rebuild

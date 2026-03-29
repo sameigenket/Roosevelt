@@ -48,6 +48,10 @@
     enable = true;
   };
 
+  programs.kdeconnect = {
+    enable = true;
+  };
+
   services.openssh = {
     enable = true;
     ports = [22];
