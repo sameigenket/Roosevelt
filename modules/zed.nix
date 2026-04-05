@@ -8,18 +8,14 @@
     installRemoteServer = true;
     extraPackages = with pkgs; [
       nixd
-      ruff
       nil
       libclang
       haskell-language-server
-      markdown-oxide
+      ruff
     ];
     userSettings = {
       telemetry = {
         metrics = false;
-      };
-      terminal = {
-        shell.program = "/nix/store/f15k3dpilmiyv6zgpib289rnjykgr1r4-bash-5.3p9/bin/zsh";
       };
       hour_format = "hour24";
       vim_mode = true;
@@ -40,13 +36,10 @@
       "basher"
       "neocmake"
       "tcl"
-      "pylsp"
       "csharp"
       "assembly"
       "haskell"
       "typst"
-      "vhdl"
-      "opencode"
       "colored-zed-icons-theme"
       "justfile"
       "ocaml"

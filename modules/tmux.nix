@@ -11,7 +11,6 @@
     keyMode = "vi";
     baseIndex = 0;
     plugins = with pkgs.tmuxPlugins; [
-      dotbar
       harpoon
       tmux-fzf
       yank
