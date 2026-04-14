@@ -12,7 +12,13 @@
       vim.lsp = {
         enable = true;
         formatOnSave = true;
-        lightbulb.enable = true;
+        lightbulb = {
+          enable = true;
+          autocmd.enable = true;
+        };
+        lspSignature = {
+          enable = true;
+        };
         lspkind.enable = false;
         lspsaga.enable = false;
         harper-ls.enable = true;
@@ -75,7 +81,10 @@
           enable = true;
           lsp.enable = true;
         };
-
+        scala = {
+          enable = true;
+          dap.enable = true;
+        };
         assembly = {
           enable = true;
           lsp.enable = true;

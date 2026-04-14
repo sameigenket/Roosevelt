@@ -12,7 +12,7 @@
           family = "Lilex Nerd Font Mono";
           style = "Regular";
         };
-        size = 17;
+        size = 18;
       };
     };
   };

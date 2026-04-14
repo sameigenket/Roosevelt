@@ -10,13 +10,12 @@
     terminal = "tmux-256color";
     keyMode = "vi";
     baseIndex = 0;
+    mouse = true;
     plugins = with pkgs.tmuxPlugins; [
       harpoon
       tmux-fzf
       yank
-      tilish
-      weather
-      fuzzback
+      dotbar
     ];
   };
 }

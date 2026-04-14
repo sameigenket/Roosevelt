@@ -11,6 +11,7 @@
     ./modules/services.nix
     ./modules/roosevelt.nix
     ./modules/nvidia.nix
+    ./modules/networking.nix
   ];
 
   boot.loader.systemd-boot = {
@@ -20,7 +21,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "roosevelt"; # Define your hostname.
-  networking.networkmanager.enable = true;
 
   time.timeZone = "America/Los_Angeles";
 
@@ -62,6 +62,7 @@
       anthy
     ];
   };
+
   programs.fish.enable = true;
   programs.zsh.enable = true;
 
@@ -70,6 +71,7 @@
     dates = [
       "daily"
     ];
+    options = "--delete-older-than 7d";
   };
 
   #Set fish as defualt shell
@@ -87,9 +89,6 @@
     dockerCompat = true;
   };
 
-  networking.nameservers = ["9.9.9.9" "149.112.112.112" "100.100.100.100" "8.8.8.8" "1.1.1.1"];
-  networking.search = ["example.ts.net"];
-
   programs.steam = {
     enable = true;
   };
@@ -98,24 +97,12 @@
     "riscv64-linux"
   ];
 
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [80 443 8080 11434];
-    allowedTCPPortRanges = [
-      {
-        from = 1714;
-        to = 1764;
-      } # KDE Connect
-    ];
-    allowedUDPPortRanges = [
-      {
-        from = 1714;
-        to = 1764;
-      } # KDE Connect
+  networking.firewall.allowedUDPPorts = [41641]; # Or add 41641 to your existing list
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
     ];
   };
-
-  networking.firewall.allowedUDPPorts = [41641]; # Or add 41641 to your existing list
-  nix.settings.experimental-features = ["nix-command" "flakes"];
   system.stateVersion = "25.11"; # Did you read the comment?
 }

@@ -12,9 +12,9 @@
       background-opacity = 0.995;
       background-blur = true;
       cursor-style-blink = true;
-      initial-command = "fish";
+      initial-command = "tmux";
       theme = "Tomorrow Night Bright";
-      font-size = 17;
+      font-size = 18;
       font-family = "Lilex Nerd Font Mono";
     };
   };

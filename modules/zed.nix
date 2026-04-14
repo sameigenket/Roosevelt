@@ -12,6 +12,8 @@
       libclang
       haskell-language-server
       ruff
+      tinymist
+      harper
     ];
     userSettings = {
       telemetry = {

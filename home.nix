@@ -33,7 +33,7 @@
       general.hide_cursor = true;
       animations.enabled = false;
       background = {
-        path = "~/.config/nix/nebula.jpg";
+        path = "~/.config/nix/space.jpg";
         blur_passes = 1;
         blur_size = 4;
       };
@@ -47,7 +47,7 @@
   services.swww = {
     enable = true;
     extraArgs = [
-      "img ./nebula.jpg"
+      "img ./space.jpg"
     ];
   };
   services.flameshot = {

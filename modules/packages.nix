@@ -49,9 +49,9 @@
     direnv
     tailscale
     just
-    verible
     thunar
     inkscape
+    verible
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.victor-mono
