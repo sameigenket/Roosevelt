@@ -66,15 +66,6 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
 
-  nix.gc = {
-    automatic = true;
-    dates = [
-      "daily"
-    ];
-    options = "--delete-older-than 7d";
-  };
-
-  #Set fish as defualt shell
   programs.bash = {
     interactiveShellInit = ''
       if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
@@ -98,11 +89,22 @@
   ];
 
   networking.firewall.allowedUDPPorts = [41641]; # Or add 41641 to your existing list
-  nix.settings = {
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+  nix = {
+    gc = {
+      automatic = true;
+      dates = [
+        "daily"
+      ];
+      options = "--delete-older-than 7d";
+    };
+
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      auto-optimise-store = true;
+    };
   };
   system.stateVersion = "25.11"; # Did you read the comment?
 }

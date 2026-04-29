@@ -23,14 +23,15 @@
         lspsaga.enable = false;
         harper-ls.enable = true;
         inlayHints.enable = true;
+        nvim-docs-view.enable = true;
         otter-nvim.enable = true;
         servers = {
-          "verible" = {
-            root_markers = [".git"];
-            cmd = ["verible-verilog-ls"];
+          "svls" = {
+            # root_markers = [".git"];
+            cmd = ["svls"];
             filetypes = [
               "systemverilog"
-              "verilog"
+              #"verilog"
             ];
           };
         };
@@ -44,7 +45,12 @@
           ui.enable = true;
         };
       };
-      vim.git.enable = true;
+      vim.git = {
+        enable = true;
+        gitsigns = {
+          enable = true;
+        };
+      };
       vim.telescope = {
         enable = true;
       };
@@ -123,6 +129,13 @@
       vim.utility = {
         yazi-nvim.enable = true;
         diffview-nvim.enable = true;
+      };
+
+      vim.diagnostics = {
+        nvim-lint = {
+          enable = true;
+          lint_after_save = true;
+        };
       };
 
       vim.statusline.lualine = {

@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   home.username = "sam";
@@ -15,6 +16,11 @@
     ./modules/tmux.nix
     ./modules/rofi.nix
     ./modules/anki.nix
+    ./modules/chromium.nix
+    ./modules/river.nix
+    ./modules/fuzzel.nix
+    ./modules/mango.nix
+    #    ./modules/helium.nix
   ];
   programs.git = {
     enable = true;
@@ -47,7 +53,9 @@
   services.swww = {
     enable = true;
     extraArgs = [
-      "img ./space.jpg"
+      "img ~/.config/nix/space.jpg"
+      "--layer"
+      "bottom"
     ];
   };
   services.flameshot = {
@@ -76,18 +84,6 @@
         entry = true;
       };
     };
-  };
-  programs.obsidian = {
-    enable = true;
-    defaultSettings = {
-      appearance = {
-        theme = "Flexoki";
-        textFontFamily = "IBM Plex Sans JP";
-      };
-    };
-  };
-  services.playerctld = {
-    enable = true;
   };
   services.trayscale = {
     enable = true;

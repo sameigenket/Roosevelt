@@ -23,7 +23,6 @@
     rofi-bluetooth
     rofi-calc
     fzf
-    yazi
     zathura
     gimp
     davinci-resolve
@@ -41,7 +40,6 @@
     cliphist
     gammastep
     ungoogled-chromium
-    koruri
     lm_sensors
     libsigrok
     sigrok-cli
@@ -49,9 +47,11 @@
     direnv
     tailscale
     just
-    thunar
-    inkscape
-    verible
+    svls
+    kdePackages.dolphin
+    xournalpp
+    vial
+    zip
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.victor-mono

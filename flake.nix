@@ -3,17 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-
+    helium.url = "gitlab:ntgn/helium-flake";
     nvf = {
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    helium = {
-      url = "github:AlvaroParker/helium-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
@@ -43,12 +39,22 @@
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
+        helium.nixosModules.helium
         home-manager.nixosModules.home-manager
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.sam = import ./home.nix;
+            users.sam = {
+              imports =
+                [
+                  helium.homeModules.helium
+                  ./home.nix
+                ]
+                ++ [
+                  mango.hmModules.mango
+                ];
+            };
             backupFileExtension = "backup";
           };
         }

@@ -5,9 +5,11 @@
 }: {
   services.ollama = {
     enable = true;
+    syncModels = true;
     package = pkgs.ollama-cuda;
     loadModels = [
       "gpt-oss:20b"
+      "gemma4:e4b"
     ];
   };
   services.open-webui = {

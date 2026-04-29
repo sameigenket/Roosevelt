@@ -21,8 +21,8 @@
       };
       hour_format = "hour24";
       vim_mode = true;
-      disable_ai = true;
-      buffer_font_size = 18;
+      disable_ai = false;
+      buffer_font_size = 17;
       buffer_font_family = "Lilex Nerd Font Mono";
       ui_font_family = "IBM Plex Sans";
       ui_font_size = 16;
@@ -45,6 +45,7 @@
       "colored-zed-icons-theme"
       "justfile"
       "ocaml"
+      "tomorrow-min-theme"
     ];
     themes = {
       mode = "dark";
