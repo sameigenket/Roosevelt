@@ -4,7 +4,7 @@
     settings = ''
       bind=SUPER,t,spawn,ghostty
       bind=SUPER,q,killclient
-      bind=SUPER,g,spawn,fuzzel
+      bind=SUPER,b,spawn,fuzzel
       bind=SUPER,p,spawn,wlogout
       bind=SUPER,r,reload_config
       bind=SUPER,n,switch_layout
@@ -19,7 +19,7 @@
       layer_animations=0
       bordercolor=0x00000000
       focuscolor=0xFFFFFFFF
-      borderpx=2
+      borderpx=3
       gappih=0
       gappiv=0
       gappoh=0
@@ -29,6 +29,8 @@
       exec-once=waybar
       exec=swww-daemon
       exec=gammastep
+      exec-once=fcitx -d -r
+      exec-once=fcitx-remote -r
 
       bind=SUPER,h,focusdir,left
       bind=SUPER,j,focusdir,down

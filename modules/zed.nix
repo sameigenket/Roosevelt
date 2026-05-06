@@ -14,6 +14,7 @@
       ruff
       tinymist
       harper
+      ocamlPackages.ocaml-lsp
     ];
     userSettings = {
       telemetry = {
@@ -21,7 +22,7 @@
       };
       hour_format = "hour24";
       vim_mode = true;
-      disable_ai = false;
+      disable_ai = true;
       buffer_font_size = 17;
       buffer_font_family = "Lilex Nerd Font Mono";
       ui_font_family = "IBM Plex Sans";

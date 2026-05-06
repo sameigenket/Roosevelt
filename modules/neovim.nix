@@ -17,7 +17,7 @@
           autocmd.enable = true;
         };
         lspSignature = {
-          enable = true;
+          enable = false;
         };
         lspkind.enable = false;
         lspsaga.enable = false;
@@ -90,6 +90,7 @@
         scala = {
           enable = true;
           dap.enable = true;
+          lsp.enable = true;
         };
         assembly = {
           enable = true;
@@ -114,7 +115,7 @@
       };
 
       vim.autocomplete = {
-        nvim-cmp.enable = true;
+        blink-cmp.enable = true;
       };
 
       vim.snippets.luasnip.enable = true;
@@ -140,9 +141,14 @@
 
       vim.statusline.lualine = {
         enable = true;
+        theme = "jellybeans";
         sectionSeparator = {
-          left = "|";
-          right = "|";
+          left = "";
+          right = "";
+        };
+        componentSeparator = {
+          left = "";
+          right = "";
         };
       };
 
@@ -152,7 +158,7 @@
       };
       vim.theme = {
         enable = true;
-        name = "base16";
+        name = "mellow";
         base16-colors = {
           base00 = "#000000";
           base01 = "#2a2a2a";

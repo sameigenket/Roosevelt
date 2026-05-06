@@ -9,19 +9,18 @@
     package = pkgs.ollama-cuda;
     loadModels = [
       "gpt-oss:20b"
-      "gemma4:e4b"
+      "granite4.1:8b"
     ];
   };
   services.open-webui = {
     enable = true;
   };
+  services.printing.enable = true;
+
   services.caddy = {
     enable = true;
     virtualHosts."roosevelt.bream-pike.ts.net".extraConfig = ''
       reverse_proxy 127.0.0.1:8080
-    '';
-    virtualHosts."ollama.roosevelt.bream-pike.ts.net".extraConfig = ''
-      reverse_proxy 127.0.0.1:11434
     '';
   };
   services.tailscale.permitCertUid = "caddy";

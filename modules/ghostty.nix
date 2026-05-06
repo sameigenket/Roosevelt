@@ -12,8 +12,7 @@
       background-opacity = 0.9;
       background-blur = true;
       cursor-style-blink = true;
-      initial-command = "tmux";
-      theme = "Tomorrow Night Bright";
+      theme = "Kanagawa Dragon";
       font-size = 17;
       font-family = "Lilex Nerd Font Mono";
     };

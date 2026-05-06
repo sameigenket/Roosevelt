@@ -6,18 +6,22 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      firmware-menu = "sudo systemctl reboot --firmware-setup";
+      ls = "eza -la";
+      cd = "z";
+      fw-menu = "sudo systemctl reboot --firmware-setup";
     };
   };
   programs.fish = {
     enable = true;
     shellAliases = {
       firmware-menu = "sudo systemctl reboot --firmware-setup";
+      ls = "eza -la";
+      cat = "bat";
+      cd = "z";
     };
     interactiveShellInit = ''
       set fish_greeting
       tmux a
-      fastfetch
     '';
     plugins = [
       {
@@ -25,6 +29,11 @@
         src = pkgs.fishPlugins.z;
       }
     ];
+  };
+
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
   };
 
   programs.zoxide = {
@@ -38,5 +47,12 @@
     enableBashIntegration = true;
     enableFishIntegration = true;
     nix-direnv.enable = true;
+  };
+
+  programs.eza = {
+    enable = true;
+    colors = "always";
+    enableFishIntegration = true;
+    enableBashIntegration = true;
   };
 }

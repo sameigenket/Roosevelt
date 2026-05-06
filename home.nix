@@ -9,15 +9,12 @@
   home.stateVersion = "25.11";
   imports = [
     ./modules/ghostty.nix
-    ./modules/alacritty.nix
     ./modules/zed.nix
     ./modules/shell.nix
     ./modules/waybar.nix
     ./modules/tmux.nix
-    ./modules/rofi.nix
     ./modules/anki.nix
     ./modules/chromium.nix
-    ./modules/river.nix
     ./modules/fuzzel.nix
     ./modules/mango.nix
     #    ./modules/helium.nix
@@ -58,21 +55,12 @@
       "bottom"
     ];
   };
-  services.flameshot = {
-    enable = true;
-    settings = {
-      General = {
-        startupLaunch = true;
-        copyPathAfterSave = true;
-      };
-    };
-  };
   services.gammastep = {
     enable = true;
     tray = true;
     temperature.night = 2000;
     dawnTime = "6:00-6:30";
-    duskTime = "18:00-18:30";
+    duskTime = "19:00-19:30";
   };
 
   programs.distrobox = {

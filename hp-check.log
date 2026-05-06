@@ -1,0 +1,217 @@
+hp-check[500459]: info: :
+hp-check[500459]: info: :[01mHP Linux Imaging and Printing System (ver. 3.25.2)[0m
+hp-check[500459]: info: :[01mDependency/Version Check Utility ver. 15.1[0m
+hp-check[500459]: info: :
+hp-check[500459]: info: :Copyright (c) 2001-18 HP Development Company, LP
+hp-check[500459]: info: :This software comes with ABSOLUTELY NO WARRANTY.
+hp-check[500459]: info: :This is free software, and you are welcome to distribute it
+hp-check[500459]: info: :under certain conditions. See COPYING file for more details.
+hp-check[500459]: info: :
+hp-check[500459]: info: :[01mNote: hp-check can be run in three modes:[0m
+hp-check[500459]: info: :1. Compile-time check mode (-c or --compile): Use this mode before compiling the HPLIP supplied tarball (.tar.gz or .run) to determine if the proper dependencies are installed to    
+hp-check[500459]: info: :successfully compile HPLIP.                                                                                                                                                           
+hp-check[500459]: info: :2. Run-time check mode (-r or --run): Use this mode to determine if a distro supplied package (.deb, .rpm, etc) or an already built HPLIP supplied tarball has the proper dependencies
+hp-check[500459]: info: :installed to successfully run.                                                                                                                                                        
+hp-check[500459]: info: :3. Both compile- and run-time check mode (-b or --both) (Default): This mode will check both of the above cases (both compile- and run-time dependencies).                            
+hp-check[500459]: info: :
+hp-check[500459]: info: :Check types:                                                                                                                                                                          
+hp-check[500459]: info: :a. EXTERNALDEP - External Dependencies                                                                                                                                                
+hp-check[500459]: info: :b. GENERALDEP - General Dependencies (required both at compile and run time)                                                                                                          
+hp-check[500459]: info: :c. COMPILEDEP - Compile time Dependencies                                                                                                                                             
+hp-check[500459]: info: :d. [All are run-time checks]                                                                                                                                                          
+hp-check[500459]: info: :PYEXT SCANCONF QUEUES PERMISSION                                                                                                                                                      
+hp-check[500459]: info: :
+hp-check[500459]: info: :Status Types:
+hp-check[500459]: info: :    OK
+hp-check[500459]: info: :    MISSING       - Missing Dependency or Permission or Plug-in
+hp-check[500459]: info: :    INCOMPAT      - Incompatible dependency-version or Plugin-version
+hp-check[500459]: info: :
+warning: [01m0-26.05 version is not supported. Using 0-0 versions dependencies to verify and install...[0m
+hp-check[500459]: info: :
+hp-check[500459]: info: :---------------
+hp-check[500459]: info: :| SYSTEM INFO |
+hp-check[500459]: info: :---------------
+hp-check[500459]: info: :
+hp-check[500459]: info: : Kernel: 6.12.67 #1-NixOS SMP PREEMPT_DYNAMIC Fri Jan 23 10:18:52 UTC 2026 GNU/Linux
+ Host: roosevelt
+ Proc: 6.12.67 #1-NixOS SMP PREEMPT_DYNAMIC Fri Jan 23 10:18:52 UTC 2026 GNU/Linux
+ Distribution: 0 26.05
+hp-check[500459]: info: : Bitness: 64 bit
+
+hp-check[500459]: info: :
+hp-check[500459]: info: :-----------------------
+hp-check[500459]: info: :| HPLIP CONFIGURATION |
+hp-check[500459]: info: :-----------------------
+hp-check[500459]: info: :
+hp-check[500459]: info: :HPLIP-Version: HPLIP 3.25.2
+hp-check[500459]: info: :HPLIP-Home: /nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/share/hplip
+warning: HPLIP-Installation: Auto installation is not supported for 0 distro  26.05 version 
+hp-check[500459]: info: :
+hp-check[500459]: info: :[01mCurrent contents of '/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/etc/hp/hplip.conf' file:[0m
+hp-check[500459]: info: :# hplip.conf.  Generated from hplip.conf.in by configure.
+
+[hplip]
+version=3.25.2
+
+[dirs]
+home=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/share/hplip
+run=/var/run
+ppd=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/share/cups/model/HP
+ppdbase=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/share/cups/model
+doc=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/share/doc/hplip-3.25.2
+html=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/share/doc/hplip-3.25.2
+icon=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/share/applications
+cupsbackend=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/lib/cups/backend
+cupsfilter=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/lib/cups/filter
+drv=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/share/cups/drv/hp
+bin=/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/bin
+apparmor=/etc/apparmor.d
+# Following values are determined at configure time and cannot be changed.
+[configure]
+network-build=yes
+libusb01-build=no
+pp-build=no
+gui-build=yes
+scanner-build=yes
+fax-build=yes
+dbus-build=yes
+cups11-build=no
+doc-build=yes
+shadow-build=no
+hpijs-install=no
+foomatic-drv-install=no
+foomatic-ppd-install=no
+foomatic-rip-hplip-install=no
+hpcups-install=yes
+cups-drv-install=yes
+cups-ppd-install=no
+internal-tag=3.25.2
+restricted-build=no
+ui-toolkit=qt5
+qt3=no
+qt4=no
+qt5=yes
+policy-kit=yes
+lite-build=no
+udev_sysfs_rules=no
+hpcups-only-build=no
+hpijs-only-build=no
+apparmor_build=no
+class-driver=no
+
+hp-check[500459]: info: :
+hp-check[500459]: info: :[01mCurrent contents of '/nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/var/lib/hp/hplip.state' file:[0m
+hp-check[500459]: info: :Plugins are not installed. Could not access file: No such file or directory
+hp-check[500459]: info: :
+hp-check[500459]: info: :[01mCurrent contents of '~/.hplip/hplip.conf' file:[0m
+hp-check[500459]: info: :[installation]
+date_time = 05/05/26 07:14:38
+version = 3.25.2
+
+
+hp-check[500459]: info: : <Package-name>        <Package-Desc>      <Required/Optional> <Min-Version> <Installed-Version> <Status>   <Comment>
+hp-check[500459]: info: :
+hp-check[500459]: info: :-------------------------
+hp-check[500459]: info: :| External Dependencies |
+hp-check[500459]: info: :-------------------------
+hp-check[500459]: info: :
+hp-check[500459]: info: :[31;01m error: cups          CUPS - Common Unix Printing System                           REQUIRED        1.1             -               INCOMPAT   'CUPS may not be installed or not running'[0m
+hp-check[500459]: info: :[31;01m error: gs            GhostScript - PostScript and PDF language interpreter and previewer REQUIRED        7.05            -               MISSING    'gs needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: xsane         xsane - Graphical scanner frontend for SANE                  OPTIONAL        0.9             -               MISSING    'xsane needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: scanimage     scanimage - Shell scanning program                           OPTIONAL        1.0             -               MISSING    'scanimage needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: dbus          DBus - Message bus system                                    REQUIRED        -               1.14.10         MISSING    'DBUS may not be installed or not running'[0m
+hp-check[500459]: info: :[31;01m error: policykit     PolicyKit - Administrative policy framework                  OPTIONAL        -               127             MISSING    'policykit needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: network       network -wget                                                OPTIONAL        -               -               MISSING    'network needs to be installed'[0m
+hp-check[500459]: info: : avahi-utils          avahi-utils                                                  OPTIONAL        -               0.8             OK         -
+hp-check[500459]: info: :
+hp-check[500459]: info: :------------------------
+hp-check[500459]: info: :| General Dependencies |
+hp-check[500459]: info: :------------------------
+hp-check[500459]: info: :
+hp-check[500459]: info: :[31;01m error: libjpeg       libjpeg - JPEG library                                       REQUIRED        -               -               MISSING    'libjpeg needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: cups-devel    CUPS devel- Common Unix Printing System development files    REQUIRED        -               -               MISSING    'cups-devel needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: cups-image    CUPS image - CUPS image development files                    REQUIRED        -               -               MISSING    'cups-image needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: libpthread    libpthread - POSIX threads library                           REQUIRED        -               b'2.42'         MISSING    'libpthread needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: libusb        libusb - USB library                                         REQUIRED        -               1.0             MISSING    'libusb needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: sane          SANE - Scanning library                                      REQUIRED        -               -               MISSING    'sane needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: sane-devel    SANE - Scanning library development files                    REQUIRED        -               -               MISSING    'sane-devel needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: libavahi-dev  libavahi-dev                                                 REQUIRED        -               -               MISSING    'libavahi-dev needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: libnetsnmp-devel libnetsnmp-devel - SNMP networking library development files REQUIRED        5.0.9           -               MISSING    'libnetsnmp-devel needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: libcrypto     libcrypto - OpenSSL cryptographic library                    REQUIRED        -               -               MISSING    'libcrypto needs to be installed'[0m
+hp-check[500459]: info: : python3X             Python 2.2 or greater - Python programming language          REQUIRED        2.2             3.13.11         OK         -
+hp-check[500459]: info: :[31;01m error: python3-notify2 Python libnotify - Python bindings for the libnotify Desktop notifications OPTIONAL        -               -               MISSING    'python3-notify2 needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: python3-pyqt4-dbus PyQt 4 DBus - DBus Support for PyQt4                         OPTIONAL        4.0             -               MISSING    'python3-pyqt4-dbus needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: python3-pyqt4 PyQt 4- Qt interface for Python (for Qt version 4.x)         REQUIRED        4.0             -               MISSING    'python3-pyqt4 needs to be installed'[0m
+hp-check[500459]: info: : python3-dbus         Python DBus - Python bindings for DBus                       REQUIRED        0.80.0          1.4.0           OK         -
+hp-check[500459]: info: : python3-xml          Python XML libraries                                         REQUIRED        -               2.7.3           OK         -
+hp-check[500459]: info: :[31;01m error: python3-devel Python devel - Python development files                      REQUIRED        2.2             3.13.11         MISSING    'python3-devel needs to be installed'[0m
+hp-check[500459]: info: : python3-pil          PIL - Python Imaging Library (required for commandline scanning with hp-scan) OPTIONAL        -               12.1.0          OK         -
+hp-check[500459]: info: : python3-reportlab    Reportlab - PDF library for Python                           OPTIONAL        2.0             4.4.7           OK         -
+hp-check[500459]: info: :
+hp-check[500459]: info: :--------------
+hp-check[500459]: info: :| COMPILEDEP |
+hp-check[500459]: info: :--------------
+hp-check[500459]: info: :
+hp-check[500459]: info: :[31;01m error: libtool       libtool - Library building support services                  REQUIRED        -               -               MISSING    'libtool needs to be installed'[0m
+hp-check[500459]: info: :[31;01m error: gcc           gcc - GNU Project C and C++ Compiler                         REQUIRED        -               -               MISSING    'gcc needs to be installed'[0m
+hp-check[500459]: info: : make                 make - GNU make utility to maintain groups of programs       REQUIRED        3.0             4.4.1           OK         -
+hp-check[500459]: info: :
+hp-check[500459]: info: :---------------------
+hp-check[500459]: info: :| Python Extentions |
+hp-check[500459]: info: :---------------------
+hp-check[500459]: info: :
+hp-check[500459]: info: : cupsext              CUPS-Extension                                               REQUIRED        -               3.25.2          OK         -
+hp-check[500459]: info: : hpmudext             IO-Extension                                                 REQUIRED        -               3.25.2          OK         -
+hp-check[500459]: info: :
+hp-check[500459]: info: :----------------------
+hp-check[500459]: info: :| Scan Configuration |
+hp-check[500459]: info: :----------------------
+hp-check[500459]: info: :
+hp-check[500459]: info: : hpaio                HPLIP-SANE-Backend                                           REQUIRED        -               3.25.2          OK         'hpaio found in /nix/store/wg134bb9zaadwmh20pz181z1dn7cqq2f-hplip-3.25.2/etc/sane.d/dll.conf'
+hp-check[500459]: info: : scanext              Scan-SANE-Extension                                          REQUIRED        -               3.25.2          OK         -
+hp-check[500459]: info: :
+hp-check[500459]: info: :------------------------------
+hp-check[500459]: info: :| DISCOVERED SCANNER DEVICES |
+hp-check[500459]: info: :------------------------------
+hp-check[500459]: info: :
+hp-check[500459]: info: :
+hp-check[500459]: info: :--------------------------
+hp-check[500459]: info: :| DISCOVERED USB DEVICES |
+hp-check[500459]: info: :--------------------------
+hp-check[500459]: info: :
+hp-check[500459]: info: :No devices found.
+hp-check[500459]: info: :
+hp-check[500459]: info: :---------------------------------
+hp-check[500459]: info: :| INSTALLED CUPS PRINTER QUEUES |
+hp-check[500459]: info: :---------------------------------
+hp-check[500459]: info: :
+hp-check[500459]: info: :
+hp-check[500459]: info: :[01mlpstat[0m
+hp-check[500459]: info: :[01m------[0m
+hp-check[500459]: info: :Type: Unknown
+hp-check[500459]: info: :Device URI: No destinations added.
+hp-check[500459]: info: :
+hp-check[500459]: info: :
+hp-check[500459]: info: :--------------
+hp-check[500459]: info: :| PERMISSION |
+hp-check[500459]: info: :--------------
+hp-check[500459]: info: :
+hp-check[500459]: info: :
+hp-check[500459]: info: :-----------
+hp-check[500459]: info: :| SUMMARY |
+hp-check[500459]: info: :-----------
+hp-check[500459]: info: :
+hp-check[500459]: info: :[01mMissing Required Dependencies[0m
+hp-check[500459]: info: :[01m-----------------------------[0m
+hp-check[500459]: info: :None
+hp-check[500459]: info: :
+hp-check[500459]: info: :[01mMissing Optional Dependencies[0m
+hp-check[500459]: info: :[01m-----------------------------[0m
+hp-check[500459]: info: :None
+
+hp-check[500459]: info: :
+hp-check[500459]: info: :Total Errors: 23
+hp-check[500459]: info: :Total Warnings: 0
+hp-check[500459]: info: :
+hp-check[500459]: info: :
+hp-check[500459]: info: :Done.

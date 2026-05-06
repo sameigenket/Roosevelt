@@ -10,7 +10,7 @@
 }
 
 window#waybar {
-    background: rgba(12, 9, 10, 0.95);
+    background: rgba(12, 9, 10, 0.85);
 }
 
 /* Ensure all module groups are transparent */
@@ -42,4 +42,12 @@ window#waybar {
 
 #pulseaudio.muted {
     color: #ff5555;
+}
+
+#custom-power {
+    background-color: #cf6a4c;
+    color: #000000;
+    margin-right: 8px;
+        margin-left: 0px;
+        padding: 8 8px;
 }

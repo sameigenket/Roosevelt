@@ -50,13 +50,23 @@
     svls
     kdePackages.dolphin
     xournalpp
-    vial
-    zip
+    gnumake
+    waypaper
+    librewolf
+    freecad
+    mozc
+    eza
+    bat
+    qalculate-gtk
+    grim
+    flameshot
+    hplip
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.victor-mono
     nerd-fonts.ubuntu-sans
     nerd-fonts.lilex
+    nerd-fonts.iosevka
     ibm-plex
   ];
 }

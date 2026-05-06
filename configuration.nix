@@ -9,9 +9,10 @@
     ./modules/neovim.nix
     ./modules/packages.nix
     ./modules/services.nix
-    ./modules/roosevelt.nix
+    ./hosts/roosevelt.nix
     ./modules/nvidia.nix
     ./modules/networking.nix
+    ./modules/fcitx.nix
   ];
 
   boot.loader.systemd-boot = {
@@ -19,6 +20,7 @@
     configurationLimit = 5;
   };
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.extraModprobeConfig = "install algif_aead /bin/false";
 
   networking.hostName = "roosevelt"; # Define your hostname.
 
@@ -53,16 +55,6 @@
     packages = [
     ];
   };
-
-  i18n.inputMethod = {
-    enable = true;
-    type = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [
-      mozc
-      anthy
-    ];
-  };
-
   programs.fish.enable = true;
   programs.zsh.enable = true;
 
@@ -87,7 +79,6 @@
     "aarch64-linux"
     "riscv64-linux"
   ];
-
   networking.firewall.allowedUDPPorts = [41641]; # Or add 41641 to your existing list
   nix = {
     gc = {
@@ -97,7 +88,6 @@
       ];
       options = "--delete-older-than 7d";
     };
-
     settings = {
       experimental-features = [
         "nix-command"

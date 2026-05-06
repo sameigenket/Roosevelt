@@ -22,6 +22,7 @@
         "memory"
         "group/audio"
         "clock"
+        "custom/power"
       ];
       "ext/workspaces" = {
         format = "{icon}";
@@ -55,6 +56,10 @@
         modules = [
           "pulseaudio"
         ];
+      };
+      "custom/power" = {
+        format = "󰐥";
+        on-click = "ghostty --app-id=poweroff-confirm --window-size-chars=36x5 bash -c 'echo; echo \"  Shut down the system?\"; echo; read -p \"  [y/N] \" a; [ \"$a\" = y ] && systemctl poweroff'";
       };
     };
   };
