@@ -7,6 +7,7 @@ rebuild:
 edit:
         sudo {{ EDITOR }}
         just rebuild
+        just commit
 
 commit:
         just rebuild

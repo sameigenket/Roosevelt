@@ -77,4 +77,15 @@
     enable = true;
     hideWindow = true;
   };
+  services.flameshot = {
+    enable = true;
+    settings = {
+      General = {
+        showStartupLaunchMessage = false;
+        startupLaunch = true;
+        savePath = "/home/sam/Documents";
+        saveAsFileExtension = ".png";
+      };
+    };
+  };
 }

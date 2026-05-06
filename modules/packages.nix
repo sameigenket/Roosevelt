@@ -60,7 +60,6 @@
     qalculate-gtk
     grim
     flameshot
-    hplip
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.victor-mono
