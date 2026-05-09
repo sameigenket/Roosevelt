@@ -47,7 +47,7 @@
     enableFishIntegration = true;
     enableBashIntegration = true;
   };
-  services.swww = {
+  services.awww = {
     enable = true;
     extraArgs = [
       "img ~/.config/nix/space.jpg"

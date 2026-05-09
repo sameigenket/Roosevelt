@@ -13,6 +13,7 @@
     ./modules/nvidia.nix
     ./modules/networking.nix
     ./modules/fcitx.nix
+    ./modules/stylix.nix
   ];
 
   boot.loader.systemd-boot = {
@@ -57,7 +58,6 @@
   };
   programs.fish.enable = true;
   programs.zsh.enable = true;
-
   programs.bash = {
     interactiveShellInit = ''
       if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]

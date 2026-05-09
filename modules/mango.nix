@@ -24,7 +24,6 @@
       gappiv=0
       gappoh=0
       gappov=0
-      adaptive_sync=1
 
       exec-once=waybar
       exec=swww-daemon
