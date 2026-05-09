@@ -50,7 +50,7 @@
   services.awww = {
     enable = true;
     extraArgs = [
-      "img ~/.config/nix/space.jpg"
+      "img ~/.config/nix/moonset.jpg"
       "--layer"
       "bottom"
     ];
@@ -81,7 +81,7 @@
     enable = true;
     settings = {
       General = {
-        showStartupLaunchMessage = false;
+        showStartupLaunchMessage = true;
         startupLaunch = true;
         savePath = "/home/sam/Documents";
         saveAsFileExtension = ".png";
