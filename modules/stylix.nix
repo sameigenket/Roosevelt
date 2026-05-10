@@ -19,6 +19,12 @@
         package = pkgs.nerd-fonts.lilex;
         name = "Lilex Nerd Font Mono";
       };
+
+      sizes = {
+        desktop = 16;
+        terminal = 17;
+        applications = 14;
+      };
     };
   };
 }

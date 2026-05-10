@@ -5,11 +5,11 @@
       main = {
         dpit-aware = "yes";
         layer = "overlay";
-        icons-enabled = "no";
+        icons-enabled = "yes";
         keyboard-focus = "on-demand";
         terminal = "ghostty -e {cmd}";
         auto-select = "yes";
-        width = 64;
+        width = 160;
       };
       border = {
         width = 0;
