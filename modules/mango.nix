@@ -25,8 +25,7 @@
       gappoh=0
       gappov=0
 
-      exec-once=waybar
-      exec=swww-daemon
+      exec=awww-daemon
       exec=gammastep
       exec-once=fcitx -d -r
       exec-once=fcitx-remote -r
